@@ -1,6 +1,8 @@
 package Tests
 
 import com.StaticMapGenerator.IO.LocationCsvReader
+import org.junit._
+
 
 @RunWith(classOf[JUnitRunner])
 class LocationCsvReaderTest {

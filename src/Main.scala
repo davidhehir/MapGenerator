@@ -1,10 +1,30 @@
+import com.StaticMapGenerator.IO.LocationCsvReader
+
 /**
- * Created with IntelliJ IDEA.
- * User: DAVID
- * Date: 20/04/13
- * Time: 10:01 PM
- * To change this template use File | Settings | File Templates.
+ * Main Map generation
  */
-class Main {
+object MapGeneration {
+  def main(args: Array[String]) {
+
+    if (length(args) != 2) {
+      println("Usage: MapGeneration.exe Input.csv Output.png")
+    }
+
+    val inputLocationData = args(0)
+    val imageFileName = args(1)
+
+    // get the locations:
+    val locations = (new LocationCsvReader).ParseFile(inputLocationData)
+
+    if (length(locations) == 0) {
+      println("File contained no location data")
+      System.exit(1)
+    }
+
+
+
+
+
+  }
 
 }
